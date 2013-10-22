@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A Magazine Website - An ASP.NET MVC sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+    @Styles.Render("~/andia-agency/css")
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="/Content/andia-agency/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/andia-agency/assets/ico/apple-touch-icon-144-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/andia-agency/assets/ico/apple-touch-icon-114-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/andia-agency/assets/ico/apple-touch-icon-72-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/Content/andia-agency/assets/ico/apple-touch-icon-57-precomposed.png")">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="container">
+        <div class="header row">
+            <div class="span12">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <h1>
+                            <a class="brand" href="http://weblogs.asp.net/thangchung">Context is King - no pain no gain...</a>
+                        </h1>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right" id="topmenucontrol">
+                                @RenderSection("topmenu", required: false)
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Description -->
+    <div class="presentation container">
+        <h2>The simple <span class="violet">magazine website</span> application.</h2>
+        <p>Using <a href="http://www.asp.net/mvc/tutorials/mvc-5/introduction/getting-started">asp.net mvc 5.0</a> for front-end page and <a href="http://www.asp.net/vnext/overview/aspnet-web-api">asp.net web api 2.0</a> & <a href="http://angularjs.org/">angularjs</a> for admin page</p>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <div class="testimonials container">
+
+    </div>
+
+    @*
+    <!-- history -->
+    <div class="testimonials container">
+        <div class="testimonials-title">
+            <h3>Histories</h3>
+        </div>
+        <div class="row">
+            <div class="testimonial-list span12">
+                <div class="tabbable tabs-below">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="A">
+                            <img src="@Url.Content("~/Content/andia-agency/assets/img/testimonials/1.jpg")" title="" alt="">
+                            <p>"1.3: We applied some new third javascript library into the admin page and change the appearance of the front-end page"<br /><span class="violet">thangchung</span></p>
+                        </div>
+                        <div class="tab-pane" id="B">
+                            <img src="@Url.Content("~/Content/andia-agency/assets/img/testimonials/3.jpg")" title="" alt="">
+                            <p>"1.2: We edited some contents in this site"<br /><span class="violet">thangchung</span></p>
+                        </div>
+                        <div class="tab-pane" id="C">
+                            <img src="@Url.Content("~/Content/andia-agency/assets/img/testimonials/2.jpg")" title="" alt="">
+                            <p>"1.1: We removed some redundant codes that commented from the community. Fixed bug, and removed the complex security model and changed it to the simple one. Re-structure the architecture of the application"<br /><span class="violet">thangchung</span></p>
+                        </div>
+                        <div class="tab-pane" id="D">
+                            <img src="@Url.Content("~/Content/andia-agency/assets/img/testimonials/1.jpg")" title="" alt="">
+                            <p>"1.0: We are finish the draft version of this example"<br /><span class="violet">thangchung</span></p>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#A" data-toggle="tab"></a></li>
+                        <li class=""><a href="#B" data-toggle="tab"></a></li>
+                        <li class=""><a href="#C" data-toggle="tab"></a></li>
+                        <li class=""><a href="#D" data-toggle="tab"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> *@
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="widget span3">
+                    <h4>About this example</h4>
+                    <p>An example that used ASP.NET MVC 5 for implementing a Magazine website.</p>
+                    <p><a href="#">Read more...</a></p>
+                </div>
+                <div class="widget span3">
+                    <h4>Latest Tweets</h4>
+                    <div class="show-tweets"></div>
+                </div>
+                <div class="widget span3">
+                    <h4>Flickr Photos</h4>
+                    <ul class="flickr-feed"></ul>
+                </div>
+                <div class="widget span3">
+                    <h4>Contact Me</h4>
+                    <p><i class="icon-map-marker"></i> Address: 123 Dummy street, Dummy ward, Dummy district, Dummy city, Viet Nam</p>
+                    <p><i class="icon-phone"></i> Phone: 0084 123 45 67 890</p>
+                    <p><i class="icon-user"></i> Skype: dummy</p>
+                    <p><i class="icon-envelope-alt"></i> Email: <a href="#">dummy@ymail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-border"></div>
+            <div class="row">
+                <div class="copyright span4">
+                    <p>Copyright &copy; @DateTime.Now.Year by <a href="http://weblogs.asp.net/thangchung">thangchung</a> - All rights reserved. Template by <a href="http://azmind.com">Azmind</a>.</p>
+                </div>
+                <div class="social span8">
+                    <a class="twitter" href="https://twitter.com/thangchung"></a>
+                    <a class="github" href="https://github.com/thangchung"></a>
+                    <a class="linkedin" href="http://www.linkedin.com/profile/view?id=49632040"></a>
+                    <a class="facebook" href="https://www.facebook.com/thangchung"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    @Scripts.Render("~/andia-agency/scripts")
+</body>
+</html>
+
+

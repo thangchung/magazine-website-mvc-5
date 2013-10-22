@@ -1,0 +1,15 @@
+﻿@model CategoryMenuViewModel
+@foreach (var menu in Model.Categories)
+{
+    var isCurrentPageString = menu.IsCurrentPage == true ? "current-page" : "";
+    <li class="@Html.Raw(isCurrentPageString)">
+        @if (menu.Id == 0)
+        {
+            <a href="/"><i class="icon-camera"></i><br />@menu.Name</a>
+        }
+        else
+        {
+            <a href="@Url.Content("/Home/Category/" + @menu.Name + "/" + @menu.Id)"><i class="icon-camera"></i><br />@menu.Name</a>
+        }
+    </li>
+}

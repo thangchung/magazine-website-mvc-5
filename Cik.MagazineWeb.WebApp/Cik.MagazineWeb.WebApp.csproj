@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cik.MagazineWeb.WebApp</RootNamespace>
+    <AssemblyName>Cik.MagazineWeb.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.1.3\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.3.0.0-rc1\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.WebApi5.3.0.0-rc1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MiniProfiler">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler.EntityFramework">
+      <HintPath>..\packages\MiniProfiler.EF.2.1.0\lib\net40\MiniProfiler.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\GlobalConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\andia-agency\assets\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\andia-agency\assets\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\andia-agency\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\andia-agency\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\andia-agency\assets\css\flexslider.css" />
+    <Content Include="Content\andia-agency\assets\css\font-awesome.css" />
+    <Content Include="Content\andia-agency\assets\css\style.css" />
+    <Content Include="Content\andia-agency\assets\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="Content\andia-agency\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\andia-agency\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\andia-agency\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\andia-agency\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\andia-agency\assets\ico\favicon.ico" />
+    <Content Include="Content\andia-agency\assets\img\line.png" />
+    <Content Include="Content\andia-agency\assets\img\line1.jpg" />
+    <Content Include="Content\andia-agency\assets\img\logo.png" />
+    <Content Include="Content\andia-agency\assets\img\pattern.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work1.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work10.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work11.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work12.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work2.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work3.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work4.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work5.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work6.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work7.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work8.jpg" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\work9.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider-nav.png" />
+    <Content Include="Content\andia-agency\assets\img\slider\1.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider\2.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider\3.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider\4.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider\5.jpg" />
+    <Content Include="Content\andia-agency\assets\img\slider\6.jpg" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\behance.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\dribbble.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\email.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\facebook.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\flickr.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\forrst.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\github.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\googleplus.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\linkedin.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\pinterest.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\rss.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\skype.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\tumblr.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\twitter.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\vimeo.png" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\youtube.png" />
+    <Content Include="Content\andia-agency\assets\img\team\1.jpg" />
+    <Content Include="Content\andia-agency\assets\img\team\2.jpg" />
+    <Content Include="Content\andia-agency\assets\img\team\3.jpg" />
+    <Content Include="Content\andia-agency\assets\img\team\4.jpg" />
+    <Content Include="Content\andia-agency\assets\img\testimonials\1.jpg" />
+    <Content Include="Content\andia-agency\assets\img\testimonials\2.jpg" />
+    <Content Include="Content\andia-agency\assets\img\testimonials\3.jpg" />
+    <Content Include="Content\andia-agency\assets\js\jflickrfeed.js" />
+    <Content Include="Content\andia-agency\assets\js\jquery-1.8.2.min.js" />
+    <Content Include="Content\andia-agency\assets\js\jquery.flexslider.js" />
+    <Content Include="Content\andia-agency\assets\js\jquery.quicksand.js" />
+    <Content Include="Content\andia-agency\assets\js\jquery.tweet.js" />
+    <Content Include="Content\andia-agency\assets\js\jquery.ui.map.min.js" />
+    <Content Include="Content\andia-agency\assets\js\scripts.js" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="Content\app.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\andia-agency\assets\bootstrap\img\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="Content\andia-agency\assets\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="Content\andia-agency\assets\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="Content\andia-agency\assets\ico\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\portfolio\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\slider\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\social-icons\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\team\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\testimonials\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\img\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_rounded\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\dark_square\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\default\Thumbs.db" />
+    <Content Include="Content\andia-agency\assets\prettyPhoto\images\prettyPhoto\facebook\Thumbs.db" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Upload\img\sample.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_TopMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cik.MagazineWeb.Application\Cik.MagazineWeb.Application.csproj">
+      <Project>{81A855C3-149B-469F-A51B-FBAD68DC95A1}</Project>
+      <Name>Cik.MagazineWeb.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Cik.Web.Utilities\Cik.Web.Utilities.csproj">
+      <Project>{5F7659F4-3033-4974-BB8D-C58E9A25D48E}</Project>
+      <Name>Cik.Web.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Cik.MagazineWeb.Init\Cik.MagazineWeb.Init.csproj">
+      <Project>{134FD065-F3C1-458E-8190-1B1638370AAC}</Project>
+      <Name>Cik.MagazineWeb.Init</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55677</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55194/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

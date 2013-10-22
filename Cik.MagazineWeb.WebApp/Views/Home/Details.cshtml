@@ -1,0 +1,16 @@
+﻿@model ItemDetailsViewModel
+@section topmenu {
+    @Html.Partial("_TopMenu", Model.TopMenu)
+}
+
+<div class="contact-us container">
+    <div class="row">
+        <div class="contact-form span7">
+            <h4>@Model.ItemDetails.Title</h4>
+            <p>@Model.ItemDetails.Content</p>
+        </div>
+        <div class="contact-address span5">
+            <img src="@Url.Content("~" + Model.ItemDetails.SmallImageUrl)" alt="@Model.ItemDetails.Title"/>
+        </div>
+    </div>
+</div>

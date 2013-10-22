@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.WebApp", "Cik.MagazineWeb.WebApp\Cik.MagazineWeb.WebApp.csproj", "{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{79F81C02-EF24-4BCC-8B5D-FD8A90B6C96C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B432827A-D7ED-450F-A89C-F76DB46228CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.Init", "Infrastructure\Cik.MagazineWeb.Init\Cik.MagazineWeb.Init.csproj", "{134FD065-F3C1-458E-8190-1B1638370AAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.EntityFrameworkProvider", "Infrastructure\Cik.MagazineWeb.EntityFrameworkProvider\Cik.MagazineWeb.EntityFrameworkProvider.csproj", "{7CD86E98-8DE0-4588-9B56-C4AB838CA02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.DomainModel", "Cik.MagazineWeb.Domain\Cik.MagazineWeb.DomainModel.csproj", "{B9ED12FC-5D87-4D20-B69A-0E812EB27F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.Application", "Cik.MagazineWeb.Application\Cik.MagazineWeb.Application.csproj", "{81A855C3-149B-469F-A51B-FBAD68DC95A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.Web.Utilities", "Framework\Cik.Web.Utilities\Cik.Web.Utilities.csproj", "{5F7659F4-3033-4974-BB8D-C58E9A25D48E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2D7513D4-9C49-496E-B562-412C2B88879F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.MagazineWeb.SchemaAndDataCreation", "Cik.MagazineWeb.SchemaAndDataCreation\Cik.MagazineWeb.SchemaAndDataCreation.csproj", "{2308AF6E-00A5-4AEF-BBB4-C8BE4CE810D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CC34FE-B18B-48BF-B1EA-D632FD0F543E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134FD065-F3C1-458E-8190-1B1638370AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134FD065-F3C1-458E-8190-1B1638370AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134FD065-F3C1-458E-8190-1B1638370AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134FD065-F3C1-458E-8190-1B1638370AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD86E98-8DE0-4588-9B56-C4AB838CA02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD86E98-8DE0-4588-9B56-C4AB838CA02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD86E98-8DE0-4588-9B56-C4AB838CA02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD86E98-8DE0-4588-9B56-C4AB838CA02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9ED12FC-5D87-4D20-B69A-0E812EB27F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9ED12FC-5D87-4D20-B69A-0E812EB27F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9ED12FC-5D87-4D20-B69A-0E812EB27F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9ED12FC-5D87-4D20-B69A-0E812EB27F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A855C3-149B-469F-A51B-FBAD68DC95A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A855C3-149B-469F-A51B-FBAD68DC95A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A855C3-149B-469F-A51B-FBAD68DC95A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A855C3-149B-469F-A51B-FBAD68DC95A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F7659F4-3033-4974-BB8D-C58E9A25D48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7659F4-3033-4974-BB8D-C58E9A25D48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7659F4-3033-4974-BB8D-C58E9A25D48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7659F4-3033-4974-BB8D-C58E9A25D48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2308AF6E-00A5-4AEF-BBB4-C8BE4CE810D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2308AF6E-00A5-4AEF-BBB4-C8BE4CE810D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2308AF6E-00A5-4AEF-BBB4-C8BE4CE810D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2308AF6E-00A5-4AEF-BBB4-C8BE4CE810D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{134FD065-F3C1-458E-8190-1B1638370AAC} = {79F81C02-EF24-4BCC-8B5D-FD8A90B6C96C}
+		{7CD86E98-8DE0-4588-9B56-C4AB838CA02C} = {79F81C02-EF24-4BCC-8B5D-FD8A90B6C96C}
+		{5F7659F4-3033-4974-BB8D-C58E9A25D48E} = {B432827A-D7ED-450F-A89C-F76DB46228CE}
+	EndGlobalSection
+EndGlobal

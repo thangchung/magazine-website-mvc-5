@@ -1,0 +1,47 @@
+﻿@model HomePageViewModel
+
+@section topmenu {
+    @Html.Partial("_TopMenu", Model.TopMenu)
+}
+
+<!-- The hottest magazines -->
+<div class="portfolio container">
+    <div class="portfolio-title">
+        <h3>The hottest magazines</h3>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.HottestItems)
+        {
+            <div class="work span3">
+                <img src="@Url.Content("~/" + @item.AvatarImage)" alt="#">
+                <h4>@item.Title</h4>
+                <p>@item.ShortDescription</p>
+                <div class="icon-awesome">
+                    <a href="@Url.Content("~/" + @item.AvatarImage)" rel="prettyPhoto"><i class="icon-search"></i></a>
+                    <a href="@Url.Content("/Home/Details/" + @item.Title + "/" + @item.CategoryId + "/" + @item.ItemId)"><i class="icon-link"></i></a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+        
+<!-- The lastest magazines -->
+<div class="portfolio container">
+    <div class="portfolio-title">
+        <h3>The lastest magazines</h3>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.LatestItems)
+        {
+            <div class="work span3">
+                <img src="@Url.Content("~" + @item.AvatarImage)" alt="#">
+                <h4>@item.Title</h4>
+                <p>@item.ShortDescription</p>
+                <div class="icon-awesome">
+                    <a href="@Url.Content("~" + @item.AvatarImage)" rel="prettyPhoto"><i class="icon-search"></i></a>
+                    <a href="@Url.Content("/Home/Details/" + @item.Title + "/" + @item.CategoryId + "/" + @item.ItemId)"><i class="icon-link"></i></a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

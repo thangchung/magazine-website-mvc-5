@@ -1,0 +1,34 @@
+﻿@model CategoryPageViewModel
+@section topmenu {
+    @Html.Partial("_TopMenu", Model.TopMenu)
+}
+
+<div class="portfolio container">
+    <div class="portfolio-title">
+        <h3>The hottest articles</h3>
+    </div>
+    @if (Model.RowItems == null || Model.RowItems.Count <= 0)
+    {
+        <p>There is no magazine for this category!!!</p>
+    }
+    else
+    {
+        foreach (var row in Model.RowItems)
+        {
+            <div class="row">
+                @foreach (var item in row.Value)
+                {
+                    <div class="work span3">
+                        <img src="@Url.Content("~" + @item.AvatarImage)" alt="#">
+                        <h4>@item.Title</h4>
+                        <p>@item.ShortDescription</p>
+                        <div class="icon-awesome">
+                            <a href="@Url.Content("~" + @item.AvatarImage)" rel="prettyPhoto"><i class="icon-search"></i></a>
+                            <a href="@Url.Content("/Home/Details/" + @item.Title + "/" + Model.CategoryId + "/" + @item.ItemId)"><i class="icon-link"></i></a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
