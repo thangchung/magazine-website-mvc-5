@@ -207,6 +207,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MWDB.mdf" />
+    <Content Include="App_Data\MWDB_log.ldf">
+      <DependentUpon>MWDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.css" />
     <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\andia-agency\assets\bootstrap\img\glyphicons-halflings-white.png" />

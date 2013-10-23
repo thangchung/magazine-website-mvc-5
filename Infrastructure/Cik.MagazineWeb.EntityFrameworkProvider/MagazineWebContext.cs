@@ -11,7 +11,6 @@
         public DbSet<Item> Items { get; set; }
 
         public MagazineWebContext()
-            : base("DefaultConnection")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
