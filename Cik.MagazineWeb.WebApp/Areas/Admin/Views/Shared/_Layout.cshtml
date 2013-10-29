@@ -1,44 +1,66 @@
 ﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - My ASP.NET Application</title>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+<html data-ng-app="@ViewBag.InitModule">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body data-twttr-rendered="true">
+        <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
             <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("Magazine Website", "Index", "Home", new { area=""}, new { @class = "navbar-brand" })
+                    <a class="navbar-brand" href="#">Admin page</a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Dashboard")</li>
-                    </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <ul class="nav navbar-nav">
+                            <li class="active">@Html.ActionLink("Dashboard", "Index", "Dashboard", routeValues: new { Area = "Admin" }, htmlAttributes: new { title = "Dashboard" })</li>
+                            <li><a href="#">All magazines</a></li>
+                        </ul>
+                    }
                     @Html.Partial("_LoginPartial")
-                </div>
+                </div><!-- /.navbar-collapse -->
             </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
+        </nav>
+        <div class="container bs-docs-container">
+            <div class="row">
+                @RenderBody()
+            </div>
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                <p>&copy; @DateTime.Now.Year - By <a href="http://twitter.com/thangchung" target="_blank">Thang Chung</a></p>
             </footer>
         </div>
 
+        <!-- 3rd party libraries -->
+        <script src="/Scripts/angular.js"></script>
+        <script src="/Scripts/angular-route.js"></script>
+        <script src="/Scripts/angular-animate.js"></script>
+        <!-- jQuery only needed with Breeze so not loaded before AngularJS in this example-->
+        <!-- If you want jQuery to replace jqlite in AngularJS then load jQuery before angular.js (not needed in this app though) -->
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
+        @*<script src="~/Scripts/q.min.js"></script>*@
+
+        <!-- Custom scripts -->
+        <script src="~/app/app.js"></script>
+        <script src="~/app/services/config.js"></script>
+        <script src="~/app/services/routeResolver.js"></script>
+        <script src="~/app/services/logger.js"></script>
+        <script src="~/app/controllers/navbarController.js"></script>
+        <script src="~/app/controllers/dashboardController.js"></script>
         @RenderSection("scripts", required: false)
     </body>
 </html>
-
 
