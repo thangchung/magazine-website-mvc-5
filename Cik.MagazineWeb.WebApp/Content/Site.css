@@ -40,3 +40,22 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+/* override panel box */
+.panel-purple {
+  border-color: #463265 !important; 
+}
+
+.panel-purple > .panel-heading {
+  color: #FFFFFF;
+  background-color: #563D7C;
+  border-color: #463265;
+}
+
+.panel-purple > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #463265;
+}
+
+.panel-purple > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #463265;
+}
