@@ -6,6 +6,7 @@
     <title>Magazine Admin Panel :: Dashboard</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
 </head>
     <body data-twttr-rendered="true">
         <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
@@ -27,24 +28,21 @@
                         <ul class="nav navbar-nav" data-ng-controller="NavbarController">
                             <li data-ng-class="{'active':highlight('/dashboard')}">
                                 @*@Html.ActionLink("Dashboard", "Index", "Dashboard", routeValues: new { Area = "Admin" }, htmlAttributes: new { title = "Dashboard" })*@
-                                <a href="#/dashboard">Dashboard</a>
+                                <a href="#/dashboard"><i class="fa fa-home fa-fw"></i> Dashboard</a>
                             </li>
-                            <li data-ng-class="{'active':highlight('/categories')}"><a href="#/categories">Category</a></li>
-                            <li data-ng-class="{'active':highlight('/items')}"><a href="#/items">Item</a></li>
+                            <li data-ng-class="{'active':highlight('/categories')}"><a href="#/categories"><i class="fa fa-book fa-fw"></i> Category</a></li>
+                            <li data-ng-class="{'active':highlight('/items')}"><a href="#/items"><i class="fa fa-fire"></i> Item</a></li>
                         </ul>
                     }
                     @Html.Partial("_LoginPartial")
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
-        <div class="container bs-docs-container">
-            <div class="row">
-                <hr/>
-                @RenderBody()
-            </div>
+        <div class="container" style="min-height: 760px;">
+            @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - By <a href="http://twitter.com/thangchung" target="_blank">Thang Chung</a></p>
+                <p>&copy; @DateTime.Now.Year - By <a href="http://twitter.com/thangchung" target="_blank">someone</a></p>
             </footer>
         </div>
 

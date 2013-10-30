@@ -1,8 +1,87 @@
-﻿<div class="panel panel-purple">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{ appTitle }}</h3>
+﻿<div class="row">
+    <div class="col-sm-12">
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-bookmark"></i>
+                <a href="#">Admin page</a>
+            </li>
+            <li class="active">
+                Category page
+            </li>
+            <li class="search-box">
+                <form class="sidebar-search" data-no-validation>
+                    <div class="form-group">
+                        <input type="text" ng-model="searchText" placeholder="Start Searching..." data-default="130" style="display: inline-block; width: 130px;">
+                        <button class="submit" data-ng-click="searchCategory()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </li>
+        </ol>
+        <div class="page-header">
+            <h1>Category Sumary</h1>
+        </div>
     </div>
-    <div class="panel-body">
-        Panel content
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default panel-purple">
+            <div class="panel-heading">
+                <i class="fa fa-book fa-fw"></i> {{ appTitle }}
+                <div class="panel-tools">
+                    <a href="#" class="btn btn-xs btn-link panel-collapse collapses">
+                    </a>
+                    <a href="#" class="btn btn-xs btn-link panel-refresh">
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                    <a href="#" class="btn btn-xs btn-link panel-expand">
+                        <i class="fa fa-resize-full"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body messages">
+                <table id="projects" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                            <th class="hidden-xs">Description</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="category in categories">
+                            <td>{{ category.name }}</td>
+                            <td class="hidden-xs">{{ category.description }}</td>
+                            <td class="center">
+                                <div class="visible-md visible-lg hidden-sm hidden-xs">
+                                    <a data-original-title="Edit" data-placement="top" class="btn btn-teal tooltips" href="#/category/edit/{{ category.id }}"><i class="fa fa-edit"></i></a>
+                                    <a data-original-title="Remove" data-placement="top" class="btn btn-bricky tooltips" href="#/category/delete/{{ category.id }}"><i class="fa fa-times fa fa-white"></i></a>
+                                </div>
+                                <div class="visible-xs visible-sm hidden-md hidden-lg">
+                                    <div class="btn-group">
+                                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-sm">
+                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" role="menu">
+                                            <li role="presentation">
+                                                <a href="#/category/edit/{{ category.id }}" tabindex="-1" role="menuitem">
+                                                    <i class="fa fa-edit"></i> Edit
+                                                </a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#/category/delete/{{ category.id }}" tabindex="-1" role="menuitem">
+                                                    <i class="fa fa-times"></i> Remove
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
