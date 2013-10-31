@@ -1,0 +1,166 @@
+﻿<div>
+    <div class="alert alert-success" data-ng-show="showStatusBox">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>Success!</strong> This is a success message.
+    </div>
+
+    <div class="row">
+        <a class="btn btn-large btn-primary pull-right" style="margin-left: 1em;" data-toggle="modal" href="#createdStoryModal">Create New Story</a>
+        <a href="#delete-alert" data-toggle="modal" class="btn btn-large btn-primary pull-right btn-danger">Delete Game</a>
+        
+        <div id="delete-alert" class="modal hide" aria-hidden="true" style="display: none;">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">×</button>
+                <h3>Confirmation Box</h3>
+            </div>
+            <div class="modal-body">
+                <p>Do you want delete this record?</p>
+            </div>
+            <div class="modal-footer">
+                <a data-dismiss="modal" class="btn btn-primary" href="#" data-ng-click="removeGame()">Confirm</a>
+                <a data-dismiss="modal" class="btn" href="#">Cancel</a>
+            </div>
+        </div>
+
+        <div class="modal hide" id="createdStoryModal" style="display: none;" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Create new story</h3>
+            </div>
+            <div class="modal-body">
+                <form name="newStoryForm" class="form-horizontal" novalidate data-ng-submit="saveNewStory()">
+                    <fieldset>
+                        <div class="control-group">
+                            <label for="role" class="control-label">As a/an ...</label>
+                            <div class="controls">
+                                <input type="text" name="role" placeholder="..." class="input-xlarge focused" data-ng-model="newStory.role" required data-ng-minlength="2" />
+                                <span class="error" data-ng-show="newStoryForm.role.$error.required">*</span>
+                                <span class="error" data-ng-show="newStoryForm.role.$error.minlength">Minimun 2 characters</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="purpose" class="control-label">I would like to ...</label>
+                            <div class="controls">
+                                <textarea name="purpose" placeholder="..." class="input-xlarge focused" data-ng-model="newStory.purpose" required data-ng-minlength="5" />
+                                <span class="error" data-ng-show="newStoryForm.purpose.$error.required">*</span>
+                                <span class="error" data-ng-show="newStoryForm.purpose.$error.minlength">Minimun 5 characters</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="result" class="control-label">So that ...</label>
+                            <div class="controls">
+                                <textarea name="result" placeholder="..." class="input-xlarge focused" data-ng-model="newStory.result" required data-ng-minlength="5" />
+                                <span class="error" data-ng-show="newStoryForm.result.$error.required">*</span>
+                                <span class="error" data-ng-show="newStoryForm.result.$error.minlength">Minimun 5 characters</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="note" class="control-label">Note: </label>
+                            <div class="controls">
+                                <textarea name="note" placeholder="..." class="input-xlarge focused" data-ng-model="newStory.note" />
+                            </div>
+                        </div>
+                        <button class="btn btn-primary pull-right" type="submit" data-ng-disabled="newStoryForm.$invalid">Save</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="span12">
+        <!-- start game details information -->
+        <div class="row-fluid">
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <h4>Details information for {{ game.name }}</h4>
+                </div>
+                <div class="block-content collapse in">
+                    <div class="span12">
+                        <form name="editGameForm" class="form-horizontal" novalidate data-ng-submit="saveEditGame()">
+                            <fieldset>
+                                <div class="control-group">
+                                    <label for="name" class="control-label">Name</label>
+                                    <div class="controls">
+                                        <input type="text" placeholder="name..." id="name" class="input-xlarge" data-ng-model="game.name" required data-ng-minlength="5">
+                                        <span class="error" data-ng-show="editGameForm.name.$error.required">*</span>
+                                        <span class="error" data-ng-show="editGameForm.name.$error.minlength">Minimun 5 characters</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="description" class="control-label">Description</label>
+                                    <div class="controls">
+                                        <textarea placeholder="description..." id="description" class="input-xlarge" data-ng-model="game.description" />
+                                    </div>
+                                </div>
+                                <button class="btn btn-large btn-primary pull-right" type="submit" data-ng-disabled="editGameForm.$invalid">Update</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end game details information -->
+    </div>
+</div>
+
+<!-- start list of stories -->
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <ul class="thumbnails">
+                <li class="span4" data-ng-repeat="story in game.stories">
+                    <div class="thumbnail pagination-centered">
+                        <h4><a href="#">Story</a></h4>
+                        <hr class="lessspace">
+                        <div class="text-left">
+                            <div><b>As a/an </b>{{ story.role }}</div>
+                            <div><b>I would like to </b>{{ story.purpose }}</div>
+                            <div><b>So that </b>{{ story.result }}</div>
+                            <div><b>Note:</b> {{ story.note }}</div>
+                        </div>
+                        <a class="btn btn-large btn-primary" data-toggle="modal" href="#myModal-{{ story.id }}">Change</a>
+                        <a class="btn btn-large btn-primary" href="#">Delete</a>
+                        <div class="modal hide" id="myModal-{{ story.id }}" style="display: none;" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h3>Story information</h3>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <div class="control-group">
+                                            <label for="role" class="control-label">Role</label>
+                                            <div class="controls">
+                                                <input type="text" value="" id="role" class="input-xlarge focused" data-ng-model="story.role">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label for="purpose" class="control-label">Purpose</label>
+                                            <div class="controls">
+                                                <textarea id="purpose" class="input-xlarge focused" data-ng-model="story.purpose" />
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label for="result" class="control-label">Result</label>
+                                            <div class="controls">
+                                                <textarea id="result" class="input-xlarge focused" data-ng-model="story.result" />
+                                            </div>
+                                        </div> 
+                                        <div class="control-group">
+                                            <label for="note" class="control-label">Note</label>
+                                            <div class="controls">
+                                                <textarea id="note" class="input-xlarge focused" data-ng-model="story.note" />
+                                            </div>
+                                        </div> 
+                                        <button class="btn btn-primary" type="submit">Update</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end list of stories -->

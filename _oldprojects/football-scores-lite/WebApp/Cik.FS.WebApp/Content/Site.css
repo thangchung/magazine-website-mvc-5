@@ -1,0 +1,94 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+ }
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* styles for removing the background from form */
+.no-color {
+  background-color: white;
+  border-style:none;
+}
+
+/* extend for css */
+.btn-primary-ex {
+    border-color: #CDBFE3;    
+    color: #563D7C;
+}
+.btn-ex{
+    color: #563D7C;
+}
+
+.league-table {
+    border-collapse: collapse;
+    color: #000000;
+    /* margin-top: 4px; */
+    width: 100%;
+}
+
+.league-table th {
+    background-color: #F7F5FA;
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    color: #716B7A;
+    height: 22px;
+    text-align: left;
+}
+
+th .league {
+    float: left;
+    margin-left: 4px;
+}
+
+th .league, th .date {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+}
+
+th .league {
+    float: left;
+    margin-left: 4px;
+}
+th .league, th .date {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+}
+
+.league-table .league a {
+    color: #716B7A;
+    /* text-decoration: underline;  */
+}
+
+.fs {
+    
+}
+
+.fs .center-margin-top {
+    margin-top: 30px;
+}

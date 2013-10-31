@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="@ViewBag.InitModule">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Planning Poker Game</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/dtbootstrapcss")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Dashboard", "Index", "Home", null, new { @class = "brand" })*@
+                <a href="#" class="brand">Admin page</a>
+                <div class="nav-collapse collapse">
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <ul class="nav">
+                            @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                            <li class="active"><a href="/Home/Index">Dashboard</a></li>
+                            <li><a href="#">All games</a></li>
+                        </ul>
+                    }
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Planning Poker Game is funny game for SCRUM process</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/angular.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/vendors/datatables/js/jquery.dataTables.js"></script>
+    @Scripts.Render("~/bundles/dtbootstrapscript")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

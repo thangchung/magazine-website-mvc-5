@@ -1,0 +1,131 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.WebApp", "WebApp\Cik.FS.WebApp\Cik.FS.WebApp.csproj", "{6213FE1F-D249-427B-93C0-89BDA6E447BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D69D6DE5-6F3E-4D55-847A-88C7751CDFD3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{372518A0-EFF5-41DD-B227-C489407D8065}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityAccessContext", "IdentityAccessContext", "{C3DF71F4-2427-4347-B8BA-3DB4315150DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FootballManagementContext", "FootballManagementContext", "{EC92535C-DE42-4E30-A5B0-6B28CD828EDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Framework", "_Framework", "{D2F1BED7-2400-4E7C-9C96-A9BD287BA603}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Infrastructure", "_Infrastructure", "{C15DC4BC-B40B-4FFE-B69F-88EC219197DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".unit-testings", ".unit-testings", "{0EC5FE12-E0C1-4FC6-9AB1-CB217BB39777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.WebApp.Tests", "UnitTestings\Cik.FS.WebApp.Tests\Cik.FS.WebApp.Tests.csproj", "{C7C8E618-E47B-4513-875B-0A0573B6D387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.IdentityAccess.Domain", "IdentityAccessContext\Cik.FS.IdentityAccess.Domain\Cik.FS.IdentityAccess.Domain.csproj", "{9191A8C1-D508-4061-9459-FD631A7D6999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.IdentityAccess.Infrastructure", "IdentityAccessContext\Cik.FS.IdentityAccess.Infrastructure\Cik.FS.IdentityAccess.Infrastructure.csproj", "{68763D26-60F6-495F-ABF1-1D5BE363A5F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.IdentityAccess.Application", "IdentityAccessContext\Cik.FS.IdentityAccess.Application\Cik.FS.IdentityAccess.Application.csproj", "{48C21A9C-B209-4179-8B94-D0472010D09F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.FootballManagement.Application", "FootballManagementContext\Cik.FS.FootballManagement.Application\Cik.FS.FootballManagement.Application.csproj", "{85F81161-15D3-4AB2-806D-490A12CFDCB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.FootballManagement.Domain", "FootballManagementContext\Cik.FS.FootballManagement.Domain\Cik.FS.FootballManagement.Domain.csproj", "{061CAA47-2C15-477E-9334-46A6758D56A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.FootballManagement.Infrastructure", "FootballManagementContext\Cik.FS.FootballManagement.Infrastructure\Cik.FS.FootballManagement.Infrastructure.csproj", "{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.Framework.Domain", "_Framework\Cik.Framework.Domain\Cik.Framework.Domain.csproj", "{8D713708-D225-45FA-B0A0-E5E9364322B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.Framework.Web", "_Framework\Cik.Framework.Web\Cik.Framework.Web.csproj", "{3D96051A-5002-44B2-B2DA-1F05E9E42953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.Framework.EntityFrameworkProvider", "_Framework\Cik.Framework.EntityFrameworkProvider\Cik.Framework.EntityFrameworkProvider.csproj", "{EAAC3F56-55C2-4893-B02C-DF8F219015A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.Init", "_Infrastructure\Cik.FS.Init\Cik.FS.Init.csproj", "{4D214202-E7EE-4960-9C52-FE7BCAB0242E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cik.FS.EntityFrameworkProvider", "_Infrastructure\Cik.FS.EntityFrameworkProvider\Cik.FS.EntityFrameworkProvider.csproj", "{BA91939F-AB90-4963-BB9E-EBA9B7D9C140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6213FE1F-D249-427B-93C0-89BDA6E447BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6213FE1F-D249-427B-93C0-89BDA6E447BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6213FE1F-D249-427B-93C0-89BDA6E447BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6213FE1F-D249-427B-93C0-89BDA6E447BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C8E618-E47B-4513-875B-0A0573B6D387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C8E618-E47B-4513-875B-0A0573B6D387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C8E618-E47B-4513-875B-0A0573B6D387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C8E618-E47B-4513-875B-0A0573B6D387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9191A8C1-D508-4061-9459-FD631A7D6999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9191A8C1-D508-4061-9459-FD631A7D6999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9191A8C1-D508-4061-9459-FD631A7D6999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9191A8C1-D508-4061-9459-FD631A7D6999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68763D26-60F6-495F-ABF1-1D5BE363A5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68763D26-60F6-495F-ABF1-1D5BE363A5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68763D26-60F6-495F-ABF1-1D5BE363A5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68763D26-60F6-495F-ABF1-1D5BE363A5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C21A9C-B209-4179-8B94-D0472010D09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C21A9C-B209-4179-8B94-D0472010D09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C21A9C-B209-4179-8B94-D0472010D09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C21A9C-B209-4179-8B94-D0472010D09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F81161-15D3-4AB2-806D-490A12CFDCB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F81161-15D3-4AB2-806D-490A12CFDCB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F81161-15D3-4AB2-806D-490A12CFDCB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F81161-15D3-4AB2-806D-490A12CFDCB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061CAA47-2C15-477E-9334-46A6758D56A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061CAA47-2C15-477E-9334-46A6758D56A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061CAA47-2C15-477E-9334-46A6758D56A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061CAA47-2C15-477E-9334-46A6758D56A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D713708-D225-45FA-B0A0-E5E9364322B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D713708-D225-45FA-B0A0-E5E9364322B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D713708-D225-45FA-B0A0-E5E9364322B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D713708-D225-45FA-B0A0-E5E9364322B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D96051A-5002-44B2-B2DA-1F05E9E42953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D96051A-5002-44B2-B2DA-1F05E9E42953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D96051A-5002-44B2-B2DA-1F05E9E42953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D96051A-5002-44B2-B2DA-1F05E9E42953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAAC3F56-55C2-4893-B02C-DF8F219015A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAC3F56-55C2-4893-B02C-DF8F219015A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAC3F56-55C2-4893-B02C-DF8F219015A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAAC3F56-55C2-4893-B02C-DF8F219015A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D214202-E7EE-4960-9C52-FE7BCAB0242E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D214202-E7EE-4960-9C52-FE7BCAB0242E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D214202-E7EE-4960-9C52-FE7BCAB0242E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D214202-E7EE-4960-9C52-FE7BCAB0242E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA91939F-AB90-4963-BB9E-EBA9B7D9C140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA91939F-AB90-4963-BB9E-EBA9B7D9C140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA91939F-AB90-4963-BB9E-EBA9B7D9C140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA91939F-AB90-4963-BB9E-EBA9B7D9C140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9191A8C1-D508-4061-9459-FD631A7D6999} = {C3DF71F4-2427-4347-B8BA-3DB4315150DF}
+		{68763D26-60F6-495F-ABF1-1D5BE363A5F1} = {C3DF71F4-2427-4347-B8BA-3DB4315150DF}
+		{48C21A9C-B209-4179-8B94-D0472010D09F} = {C3DF71F4-2427-4347-B8BA-3DB4315150DF}
+		{85F81161-15D3-4AB2-806D-490A12CFDCB0} = {EC92535C-DE42-4E30-A5B0-6B28CD828EDD}
+		{061CAA47-2C15-477E-9334-46A6758D56A2} = {EC92535C-DE42-4E30-A5B0-6B28CD828EDD}
+		{CFB4A538-4F5B-4F25-856F-1B9FE5A68E14} = {EC92535C-DE42-4E30-A5B0-6B28CD828EDD}
+		{8D713708-D225-45FA-B0A0-E5E9364322B4} = {D2F1BED7-2400-4E7C-9C96-A9BD287BA603}
+		{3D96051A-5002-44B2-B2DA-1F05E9E42953} = {D2F1BED7-2400-4E7C-9C96-A9BD287BA603}
+		{EAAC3F56-55C2-4893-B02C-DF8F219015A8} = {D2F1BED7-2400-4E7C-9C96-A9BD287BA603}
+		{4D214202-E7EE-4960-9C52-FE7BCAB0242E} = {C15DC4BC-B40B-4FFE-B69F-88EC219197DD}
+		{BA91939F-AB90-4963-BB9E-EBA9B7D9C140} = {C15DC4BC-B40B-4FFE-B69F-88EC219197DD}
+		{C7C8E618-E47B-4513-875B-0A0573B6D387} = {0EC5FE12-E0C1-4FC6-9AB1-CB217BB39777}
+	EndGlobalSection
+EndGlobal

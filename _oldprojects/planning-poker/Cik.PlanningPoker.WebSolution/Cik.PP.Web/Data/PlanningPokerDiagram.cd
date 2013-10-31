@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cik.PP.Web.Data.Game">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAgAAAAAAAAAAQAAAAAAAQCAAAAAAAAAAE=</HashCode>
+      <FileName>Data\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="GameRuntimes" />
+      <Property Name="Stories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Cik.PP.Web.Data.GameRuntime">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAEAAAAAAEgAAAQAAKAAAAAAAAA=</HashCode>
+      <FileName>Data\GameRuntime.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Participant" />
+      <Property Name="Game" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="StoryRuntimes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Cik.PP.Web.Data.Participant">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAE=</HashCode>
+      <FileName>Data\Participant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cik.PP.Web.Data.Story">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAEAEAAAQAAAgAAAQAIAAAAAAAAAE=</HashCode>
+      <FileName>Data\Story.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Cik.PP.Web.Data.StoryRuntime">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgCAAgAAAAAQAAEABAAAAAAAAAAAAQCAAEAAAAAAAA=</HashCode>
+      <FileName>Data\StoryRuntime.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameRuntime" />
+      <Property Name="Story" />
+      <Property Name="FinalPoint" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="VotedPoints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="Cik.PP.Web.Data.Point">
+    <Position X="10.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAEAQAAAAAAQAFAgAgAAgAAAAAAJA=</HashCode>
+      <FileName>Data\Point.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
