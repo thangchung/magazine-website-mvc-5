@@ -9,7 +9,7 @@
     <link href="css/site.css" rel="stylesheet"/>
     <link href="css/docs.css" rel="stylesheet"/>
     <link href="css/pygments-manni.css" rel="stylesheet"/>
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />  
     <script src="js/modernizr-2.6.2.js"></script>    
 </head>
 <body data-twttr-rendered="true">
@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><i class="fa fa-renren"></i> Magazine Management Page</a>
+                <b><a class="navbar-brand" href="/"><i class="fa fa-renren"></i> MAGAZINE ADMINISTRATION PAGE</a></b>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -51,26 +51,80 @@
                     <div class="panel-heading">
                         <b><i class="fa fa-book fa-fw"></i> Category</b>
                         <div class="panel-tools panel-tools-center">                            
-                            <a class="btn" href="#">
+                            <a class="btn tooltip-ex" href="#" data-original-title="add new category" data-placement="right">
                                 <i class="fa fa-plus"></i>
                             </a>                            
                         </div>
                     </div>
                     <div class="sidenav">
                         <ul class="nav nav-sidenav">                        
-                            <li class="active"><a href="#sport"><i class="fa fa-angle-double-right"></i> Sport <span class="badge">2</span></a></li>
-                            <li><a href="#fashion"><i class="fa fa-angle-double-right"></i> Fashion <span class="badge">1</span></a></li>
-                            <li><a href="#news"><i class="fa fa-angle-double-right"></i> News <span class="badge">100</span></a></li>
-                            <li><a href="#music"><i class="fa fa-angle-double-right"></i> Music <span class="badge">1000</span></a></li>               
+                            <li class="active">
+                                <a href="#sport"><i class="fa fa-angle-double-right"></i> Sport <span class="badge">2</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a> 
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a>  
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#fashion"><i class="fa fa-angle-double-right"></i> Fashion <span class="badge">1</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>  
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a>  
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#news"><i class="fa fa-angle-double-right"></i> News <span class="badge">100</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>   
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a> 
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#music"><i class="fa fa-angle-double-right"></i> Music <span class="badge">1000</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>   
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a> 
+                                </div>
+                            </li>               
                         </ul>                                              
                     </div>
                 </div>                  
                 <!-- add category panel -->
                 <div class="panel panel-purple padding-box">
+                    <div class="panel-heading">
+                        <b><i class="fa fa-file-text-o"></i> Add new category</b>                        
+                    </div>
                     <div class="panel-body">     
                         <form class="form-inline" role="form">     
-                            <div class="form-group">
-                                <h3><i class="fa fa-pencil"></i> Add new category</h3>                    
+                            <div class="form-group">                                                  
                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
                                 <input type="text" class="form-control" id="exampleInputEmail2" placeholder="name">                           
                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
@@ -85,48 +139,38 @@
             <div class="col-md-9" role="main">
                 <!-- start right column -->
                 <div class="panel panel-purple padding-box">
-                    <div class="panel-body">
+                    <div class="panel-body">                        
                         <h1><i class="fa fa-th-large"></i> Augue rhoncus cum lectus dapibus et duis in</h1>
-                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>
+
+                        <p class="pull-left scale-img">
+                            <img src="images/sample.png" width="95%" height="200px">
+                        </p>            
+
+                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>                        
+
                         <ul class="pager on-bottom">    
                             <li class="previous"><a href="#"><i class="fa fa-thumbs-up"></i> Like</a></li>    
-                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li>                      
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li> 
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-share-square-o"></i> Share</a></li>                     
                             <li class="next"><a href="#">More details →</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="panel panel-purple padding-box">
-                    <div class="panel-body">
+                    <div class="panel-body">                        
                         <h1><i class="fa fa-th-large"></i> Augue rhoncus cum lectus dapibus et duis in</h1>
-                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>
-                        <ul class="pager on-bottom">    
-                            <li class="previous"><a href="#"><i class="fa fa-thumbs-up"></i> Like</a></li>    
-                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li>                      
-                            <li class="next"><a href="#">More details →</a></li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="panel panel-purple padding-box">
-                    <div class="panel-body">
-                        <h1><i class="fa fa-th-large"></i> Augue rhoncus cum lectus dapibus et duis in</h1>
-                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>
-                        <ul class="pager on-bottom">    
-                            <li class="previous"><a href="#"><i class="fa fa-thumbs-up"></i> Like</a></li>    
-                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li>                      
-                            <li class="next"><a href="#">More details →</a></li>
-                        </ul>
-                    </div>
-                </div>
+                        <p class="pull-left scale-img">
+                            <img src="images/sample.png" width="95%" height="200px">
+                        </p>            
 
-                <div class="panel panel-purple padding-box">
-                    <div class="panel-body">
-                        <h1><i class="fa fa-th-large"></i> Augue rhoncus cum lectus dapibus et duis in</h1>
-                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>
+                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>                        
+
                         <ul class="pager on-bottom">    
                             <li class="previous"><a href="#"><i class="fa fa-thumbs-up"></i> Like</a></li>    
-                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li>                      
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li> 
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-share-square-o"></i> Share</a></li>                     
                             <li class="next"><a href="#">More details →</a></li>
                         </ul>
                     </div>
@@ -138,8 +182,13 @@
         <footer>
             <p>&copy; 2013 - By <a href="http://twitter.com/thangchung" target="_blank">someone</a></p>
         </footer>
-    </div>        
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    </div>
+    <script src="js/jquery-1.10.2.js"></script>    
+    <script src="js/bootstrap.js"></script>    
+    <script>
+        $(function(){            
+            $('.tooltip-ex').tooltip('hide');
+        });
+    </script>
 </body>
 </html>

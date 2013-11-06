@@ -230,3 +230,12 @@ label {
     margin-top: -15px;
     position: relative;
 }
+
+.panel-tools-item-center {
+    margin-right: -5px;
+}
+
+.scale-img {
+    width:50%;
+    height: 200px;
+}
