@@ -202,6 +202,7 @@ label {
 
 .padding-box {
     margin-top: 15px;
+    position: relative;
 }
 
 .on-bottom {    
@@ -214,6 +215,14 @@ label {
 
 .on-top-absolute{
     padding-top: 2px;
+}
+
+.mgz-form-more-bottom {
+    margin-bottom: 5px;
+}
+
+.mgz-form-help {
+    margin-left: 5px;
 }
 
 .pager li > a, .pager li > span {
@@ -235,7 +244,29 @@ label {
     margin-right: -5px;
 }
 
+.panel-tools-header-item-center {
+    margin-right: -30px;
+    margin-top: -10px;
+}
+
 .scale-img {
     width:50%;
     height: 200px;
 }
+
+.hover-display a + div{
+    display: none;
+} 
+
+.hover-display:hover a + div {
+    display: block;
+}
+
+.hover-display-item .panel-tools {
+    display: none;
+} 
+
+.hover-display-item:hover .panel-tools {
+    display: block;
+}
+
