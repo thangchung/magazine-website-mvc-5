@@ -269,4 +269,50 @@ label {
 .hover-display-item:hover .panel-tools {
     display: block;
 }
+/* customize file upload */
+input.file {  
+    border: 1px solid #BBB;
+    border-right: 0;
+    color: #888;
+    padding: 5px;    
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;    
+    outline: none;
+}
 
+span.file-upload {
+    /* background: -moz-linear-gradient(center top , #563D7C 0%, #563D7C 44%, #563D7C 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); */
+    background: #563D7C;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    font-weight: bold;
+    height: 28px;
+    overflow: hidden;
+    padding-top: 8px;
+    position: absolute;
+    text-align: center;
+    width: 65px;
+}
+span.file-upload:before {
+    content: 'UPLOAD';
+    position: absolute;
+    left: 0; right: 0;
+    text-align: center;
+    margin-top: -2px;
+    cursor: pointer;
+}
+
+span.file-upload input {
+    position: relative;    
+    display: inline;
+    cursor: pointer;
+    opacity: 0;
+    margin-top: -7px;
+}
